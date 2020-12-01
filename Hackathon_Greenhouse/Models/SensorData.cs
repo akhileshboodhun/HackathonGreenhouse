@@ -14,8 +14,10 @@ namespace Hackathon_Greenhouse.Models
         public double humidity { get; set; }
         public bool fan { get; set; }
         public bool pump { get; set; }
-        public double fan_power { get; set; }
-        public double pump_power { get; set; }
-        public string led_strip_matrix { get; set; }
+        public bool servo { get; set; }
+        public bool is_moist { get; set; }
+
+        public bool high_light_intensity { get; set; }
+        public bool isLightOn { get; set; }
     }
 }

@@ -24,20 +24,23 @@ namespace Hackathon_Greenhouse.Migrations
                     b.Property<bool>("fan")
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("fan_power")
-                        .HasColumnType("REAL");
+                    b.Property<bool>("high_light_intensity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<double>("humidity")
                         .HasColumnType("REAL");
 
-                    b.Property<string>("led_strip_matrix")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("isLightOn")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("is_moist")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("pump")
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("pump_power")
-                        .HasColumnType("REAL");
+                    b.Property<bool>("servo")
+                        .HasColumnType("INTEGER");
 
                     b.Property<double>("temp")
                         .HasColumnType("REAL");

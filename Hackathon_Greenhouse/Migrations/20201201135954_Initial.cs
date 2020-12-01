@@ -16,9 +16,10 @@ namespace Hackathon_Greenhouse.Migrations
                     humidity = table.Column<double>(type: "REAL", nullable: false),
                     fan = table.Column<bool>(type: "INTEGER", nullable: false),
                     pump = table.Column<bool>(type: "INTEGER", nullable: false),
-                    fan_power = table.Column<double>(type: "REAL", nullable: false),
-                    pump_power = table.Column<double>(type: "REAL", nullable: false),
-                    led_strip_matrix = table.Column<string>(type: "TEXT", nullable: true)
+                    servo = table.Column<bool>(type: "INTEGER", nullable: false),
+                    is_moist = table.Column<bool>(type: "INTEGER", nullable: false),
+                    high_light_intensity = table.Column<bool>(type: "INTEGER", nullable: false),
+                    isLightOn = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

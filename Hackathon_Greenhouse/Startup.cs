@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Hackathon_Greenhouse.Data;
+//using Hackathon_Greenhouse.Data;
 
 namespace Hackathon_Greenhouse
 {
@@ -26,6 +27,7 @@ namespace Hackathon_Greenhouse
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
 
             services.AddDbContext<Hackathon_GreenhouseContext>(options =>
                     options.UseSqlite("Filename=./hgDB.db"));

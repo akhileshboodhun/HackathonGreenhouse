@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hackathon_Greenhouse.Migrations
 {
     [DbContext(typeof(Hackathon_GreenhouseContext))]
-    [Migration("20201130145949_Initial")]
+    [Migration("20201201135954_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,20 +26,23 @@ namespace Hackathon_Greenhouse.Migrations
                     b.Property<bool>("fan")
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("fan_power")
-                        .HasColumnType("REAL");
+                    b.Property<bool>("high_light_intensity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<double>("humidity")
                         .HasColumnType("REAL");
 
-                    b.Property<string>("led_strip_matrix")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("isLightOn")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("is_moist")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("pump")
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("pump_power")
-                        .HasColumnType("REAL");
+                    b.Property<bool>("servo")
+                        .HasColumnType("INTEGER");
 
                     b.Property<double>("temp")
                         .HasColumnType("REAL");

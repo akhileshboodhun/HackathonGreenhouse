@@ -93,7 +93,6 @@ namespace Hackathon_Greenhouse.Controllers
             return CreatedAtAction("GetSensorData", new { id = sensorData.id }, sensorData);
         }
 
-
         // DELETE: api/SensorDatas/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<SensorData>> DeleteSensorData(int id)
