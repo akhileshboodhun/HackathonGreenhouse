@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hackathon_Greenhouse.Migrations
 {
     [DbContext(typeof(Hackathon_GreenhouseContext))]
-    [Migration("20201201135954_Initial")]
+    [Migration("20201202055327_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,9 @@ namespace Hackathon_Greenhouse.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("date_time")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("fan")
                         .HasColumnType("INTEGER");

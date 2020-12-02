@@ -30,7 +30,6 @@ namespace Hackathon_Greenhouse.Controllers
             return await _context.SensorData.ToListAsync();
         }
 
-        // GET: api/SensorDatas/last
         [EnableCors("MyPolicy")]
         [HttpGet("last")]
         public async Task<ActionResult<SensorData>> GetSensorDataLast()

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Hackathon_Greenhouse.Data;
 //using Hackathon_Greenhouse.Data;
+//using Hackathon_Greenhouse.Data;
 
 namespace Hackathon_Greenhouse
 {
@@ -33,6 +34,7 @@ namespace Hackathon_Greenhouse
                        .AllowAnyHeader();
             }));
             services.AddControllersWithViews();
+
 
 
             services.AddDbContext<Hackathon_GreenhouseContext>(options =>

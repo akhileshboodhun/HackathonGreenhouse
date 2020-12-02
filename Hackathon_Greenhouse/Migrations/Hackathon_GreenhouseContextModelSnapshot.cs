@@ -21,6 +21,9 @@ namespace Hackathon_Greenhouse.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("date_time")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("fan")
                         .HasColumnType("INTEGER");
 

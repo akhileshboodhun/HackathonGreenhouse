@@ -19,5 +19,6 @@ namespace Hackathon_Greenhouse.Models
 
         public bool high_light_intensity { get; set; }
         public bool isLightOn { get; set; }
+        public string date_time { get; set; }
     }
 }

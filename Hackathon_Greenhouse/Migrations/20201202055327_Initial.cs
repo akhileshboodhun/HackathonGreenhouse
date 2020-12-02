@@ -19,7 +19,8 @@ namespace Hackathon_Greenhouse.Migrations
                     servo = table.Column<bool>(type: "INTEGER", nullable: false),
                     is_moist = table.Column<bool>(type: "INTEGER", nullable: false),
                     high_light_intensity = table.Column<bool>(type: "INTEGER", nullable: false),
-                    isLightOn = table.Column<bool>(type: "INTEGER", nullable: false)
+                    isLightOn = table.Column<bool>(type: "INTEGER", nullable: false),
+                    date_time = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
