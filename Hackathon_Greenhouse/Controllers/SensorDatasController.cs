@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hackathon_Greenhouse.Data;
 using Hackathon_Greenhouse.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace Hackathon_Greenhouse.Controllers
 {
@@ -22,6 +23,7 @@ namespace Hackathon_Greenhouse.Controllers
         }
 
         // GET: api/SensorDatas
+        [EnableCors("MyPolicy")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SensorData>>> GetSensorData()
         {
@@ -29,6 +31,7 @@ namespace Hackathon_Greenhouse.Controllers
         }
 
         // GET: api/SensorDatas/last
+        [EnableCors("MyPolicy")]
         [HttpGet("last")]
         public async Task<ActionResult<SensorData>> GetSensorDataLast()
         {
@@ -36,6 +39,7 @@ namespace Hackathon_Greenhouse.Controllers
         }
 
         // GET: api/SensorDatas/5
+        [EnableCors("MyPolicy")]
         [HttpGet("{id}")]
         public async Task<ActionResult<SensorData>> GetSensorData(int id)
         {
@@ -52,6 +56,7 @@ namespace Hackathon_Greenhouse.Controllers
         // PUT: api/SensorDatas/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [EnableCors("MyPolicy")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSensorData(int id, SensorData sensorData)
         {
@@ -84,6 +89,7 @@ namespace Hackathon_Greenhouse.Controllers
         // POST: api/SensorDatas
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [EnableCors("MyPolicy")]
         [HttpPost]
         public async Task<ActionResult<SensorData>> PostSensorData(SensorData sensorData)
         {
@@ -94,6 +100,7 @@ namespace Hackathon_Greenhouse.Controllers
         }
 
         // DELETE: api/SensorDatas/5
+        [EnableCors("MyPolicy")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<SensorData>> DeleteSensorData(int id)
         {
